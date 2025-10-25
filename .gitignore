@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Local .terraform directories
 .terraform/
 
@@ -35,3 +36,78 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+=======
+# =========================================
+# 🌍 TERRAFORM
+# =========================================
+# Archivos de estado y backup
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*
+*.backup
+#*.tfvars       # ⚠️ No subir archivos con variables sensibles
+*.tfvars.json
+
+# Directorios de Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Salidas de plan
+terraform.tfplan
+plan.out
+tfplan
+
+# =========================================
+# ⚙️ JENKINS
+# =========================================
+# Archivos temporales y workspace
+workspace/
+builds/
+logs/
+*.log
+*.tmp
+
+# Jenkins pipeline data
+.jenkins/
+*.bak
+*.old
+
+# =========================================
+# 🧩 SISTEMA / IDE
+# =========================================
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# IDEs (VSCode, JetBrains, etc.)
+.vscode/
+.idea/
+*.iml
+
+# =========================================
+# 🔒 CREDENCIALES Y ARCHIVOS SENSIBLES
+# =========================================
+# Credenciales, llaves y certificados
+*.pem
+*.key
+*.crt
+*.pfx
+*.cer
+*.jks
+*.secrets
+secrets.*
+.env
+.env.*
+
+# =========================================
+# 📦 OTROS
+# =========================================
+# Archivos temporales de Python, Node, etc.
+__pycache__/
+*.pyc
+node_modules/
+dist/
+>>>>>>> pruebas
