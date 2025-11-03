@@ -10,7 +10,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'Infra_AWS', url: 'https://github.com/Andres-0903/Practica_Infra_AWS.git'
+                git branch: 'Infa_AWS',
+                credentialsId: 'github-credentials',
+                url: 'https://github.com/Andres-0903/Practica_Infra_AWS.git'
             }
         }
         
