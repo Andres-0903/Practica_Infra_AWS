@@ -40,6 +40,15 @@ pipeline {
                 }
             }
         }
+        
+        stage('Destroy Terraform') {
+            steps {
+                input message: '¿Deseas destruir la infraestructura en AWS?'
+                dir('Prueba_Infra_AWS/Infra_AWS_1') {
+                    sh 'terraform destroy -auto-approve'
+                }
+            }
+        }
     }
     
     post {
