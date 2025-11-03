@@ -18,20 +18,26 @@ pipeline {
         
         stage('Init Terraform') {
             steps {
-                sh 'terraform init'
+                dir('Prueba_Infra_AWS/Infra_AWS_1') {
+                    sh 'terraform init'
+                }
             }
         }
         
         stage('Plan Terraform') {
             steps {
-                sh 'terraform plan -out=tfplan'
+                dir('Prueba_Infra_AWS/Infra_AWS_1') {
+                    sh 'terraform plan -out=tfplan'
+                }
             }
         }
         
         stage('Apply Terraform') {
             steps {
                 input message: '¿Deseas aplicar los cambios en AWS?'
-                sh 'terraform apply -auto-approve tfplan'
+                dir('Prueba_Infra_AWS/Infra_AWS_1') {
+                    sh 'terraform apply -auto-approve tfplan'
+                }
             }
         }
     }
